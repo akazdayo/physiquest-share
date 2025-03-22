@@ -29,22 +29,6 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
         };
     }, [onClose]);
 
-    const handleModalClick = (e: React.MouseEvent) => {
-        const dialogDimensions = modalRef.current?.getBoundingClientRect();
-        if (!dialogDimensions) return;
-
-        // クリックがダイアログの外側で発生したかチェック
-        const clickedInDialog =
-            e.clientX >= dialogDimensions.left &&
-            e.clientX <= dialogDimensions.right &&
-            e.clientY >= dialogDimensions.top &&
-            e.clientY <= dialogDimensions.bottom;
-
-        if (!clickedInDialog) {
-            onClose();
-        }
-    };
-
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === "Escape") {
             onClose();
@@ -56,7 +40,6 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
             ref={modalRef}
             className="fixed inset-0 bg-transparent p-0 m-0 w-full h-full focus:outline-none"
             open
-            onClick={handleModalClick}
             onKeyDown={handleKeyDown}
             aria-labelledby="modal-title"
         >
@@ -68,8 +51,6 @@ const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
             >
                 <div
                     className="bg-white dark:bg-gray-800 rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto"
-                    onKeyDown={handleKeyDown}
-                    onClick={(e) => e.stopPropagation()}
                 >
                     <div className="relative aspect-video bg-black">
                         <img
