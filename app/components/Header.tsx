@@ -1,7 +1,7 @@
 
 // components/Header.tsx
 "use client";
-import React from "react";
+import type React from "react";
 
 interface HeaderProps {
     searchTerm: string;

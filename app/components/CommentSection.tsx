@@ -1,7 +1,6 @@
 // components/CommentSection.tsx
 "use client";
-import React, { useState } from "react";
-
+import { useState } from "react";
 const CommentSection: React.FC = () => {
     const [commentText, setCommentText] = useState<string>("");
 
@@ -21,8 +20,9 @@ const CommentSection: React.FC = () => {
                 rows={3}
                 value={commentText}
                 onChange={(e) => setCommentText(e.target.value)}
-            ></textarea>
+            />
             <button
+                type="button"
                 className="bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-4 py-2 rounded-md hover:opacity-80"
                 onClick={handleSubmitComment}
             >

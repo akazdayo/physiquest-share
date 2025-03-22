@@ -1,8 +1,8 @@
 // components/VideoGrid.tsx
 "use client";
-import React from "react";
+import type React from "react";
 import VideoCard from "./VideoCard";
-import { Video } from "../types";
+import type { Video } from "../types";
 
 interface VideoGridProps {
     videos: Video[];

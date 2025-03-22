@@ -1,7 +1,7 @@
 // components/VideoCard.tsx
 "use client";
-import React from "react";
-import { Video } from "../types";
+import type React from "react";
+import type { Video } from "../types";
 
 interface VideoCardProps {
     video: Video;
@@ -10,6 +10,7 @@ interface VideoCardProps {
 
 const VideoCard: React.FC<VideoCardProps> = ({ video, onClick }) => {
     return (
+        // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
         <div
             className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden transform transition-transform hover:-translate-y-1 cursor-pointer"
             onClick={() => onClick(video)}

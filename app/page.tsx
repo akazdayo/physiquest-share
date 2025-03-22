@@ -1,11 +1,12 @@
 // App.tsx (または page.tsx)
 "use client";
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import Header from "./components/Header";
 import VideoGrid from "./components/VideoGrid";
 import VideoModal from "./components/VideoModal";
 import { sampleVideos } from "./data/sampleData";
-import { Video } from "./types";
+import type { Video } from "./types";
 
 const VideoShareApp: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
