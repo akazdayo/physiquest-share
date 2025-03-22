@@ -4,7 +4,8 @@ import type { Video } from "../types";
 export const sampleVideos: Video[] = [
 	{
 		id: 1,
-		thumbnail: "/video-thumbnail-1.jpg",
+		thumbnail:
+			"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRuu0RWoeHs26-kJWDLyILcJZ9OljBuc_LyatexrDqGsYOBKNqKJWrt_jKhFATb1jmj124nhh4vTprkPzcRYemzFuSxbCR9cGFomOZx-vnOwQ5a16_4TmbjRWUolmtkNHg_d_5h-BtyvoTMJCvJ6ZmiiiSyu_0RfsbAStBrMaoUm8HN6NFJHIi-Lv8f0hh/s400/bird_fukurou_run.png",
 		duration: "3:45",
 		title: "東京の街並み散歩",
 		author: "山田太郎",
@@ -15,7 +16,8 @@ export const sampleVideos: Video[] = [
 	},
 	{
 		id: 2,
-		thumbnail: "/video-thumbnail-2.jpg",
+		thumbnail:
+			"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguqCpgA29X7NRqzwxkgB0u6pjV53LzOUrK9jb3EbhR1P3Sv6Dz_HqeWLNRIq6UzWEJRlEUx1ZhagFp6a6AWYAKTNDBrd8TiSa2doe_Joi9qivoINKtyIfxQoUkTLKyWI89UJ7dft37kqY/s400/tree1_haru.png",
 		duration: "5:20",
 		title: "料理の作り方講座",
 		author: "鈴木花子",
